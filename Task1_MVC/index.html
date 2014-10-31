@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <!-- Include css stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<!-- List of categories -->
+    <div>
+    	<h1>Coupon Dunia Task 1 </h1>
+  	</div>
+  	<div>
+  		<h2> <b> Select a category </b> </h2>  	
+    <div id="categories">
+      <ul id="category">
+
+    <?php while($row = mysqli_fetch_array($categories, MYSQL_ASSOC)){
+      echo "<li class='hover-grey'>{$row['Name']}
+        <span style='display:none;'>{$row['URLKeyword']}</span>
+      </li>"; 
+    }
+    ?>
+  	
+     </ul>
+    </div>
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/app.js"></script>
+
+</html>
